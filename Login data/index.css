@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* back-ground image  properties*/
+body {
+    background:rgb(0, 0, 0, 0.361)url(https://img1.junaroad.com/assets/images/mobileNotif/1550226140074.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center;
+background-blend-mode: darken;
+}
+
+/* form body styles */
+
+.form{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+ .formInnerContainer{
+    width: 600px;
+ }
+.shopbycategory{
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    margin-bottom: 30px;
+
+}
+.shopbycategory>div{
+    display: flex;
+    height:48px;
+    width: 250px;
+    border: 2px solid greenyellow;
+    align-items: center;
+justify-content: center;
+   background-color: greenyellow;
+   color: black;
+   font-weight: bolder;
+   font-size: 20px;
+   border-radius: 10px;
+   
+}
+
+.logIn:hover,.shopbycategory>div:hover{
+    cursor: pointer;
+}
+
+
+/* margin-padding starts */
+#headImg{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.formInnerContainer p+p{
+    margin-bottom: 100px;
+}
+
+/* font size of p */
+.formInnerContainer .para{
+    color: white;
+    font-size: 32px;
+    text-align: center;
+}
+#headImg{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+.formInnerContainer p:last-child{
+    color: white;
+    font-size:18px;
+    text-align: center;
+}
+
+/* Anchor tag style */
+.logIn>a[href='login.html']{
+    text-decoration: none;
+    color: white;
+}
