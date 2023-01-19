@@ -4,42 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login and registration form</title>
+    <title>Document</title>
     <link rel="stylesheet" href="login.css">
-    <!-- icons link -->
+    <!-- icon link -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 </head>
 <body>
-    
-<!-- <div class="loginContainer">
-    <h1>Welcome to LimeRoad</h1>
-    <form action="">
-        <div class="formBody">
-     <input id="email" placeholder="Email address" type="email">
-   <input placeholder="Password" type="password" id="password">
-    <input type="submit" value="Login"></div>
-</div>
-    </form>
-    <p> New to LimeRoad?<a href="#">SignUp Now</a></p>
-</div> -->
-<div class="body">
 <div class="container">
-    <div class="form">
-        <div class="formLogin">
-            <span class="title">Login</span>
-            <form action="#">
-                <div class="inputfield">
-                <input type="text" name="" placeholder="Enter your Email" id="" required>
-                <i class="uil uil-envelope"></i>
+    <div class="formbody">
+        <span><h1>Welcome Back</h1></span>
+        
+        <form  id="formData" action="">
+            <div class="form">
+                <div class="input email">
+                    <input type="email" placeholder="Enter Email" name="" id="inp-email">
+                    <i class="uil uil-envelope icon-email"></i>
+                </div>
+                <div class="dataValidation">
+                    <span >
+                        <i></i><p>Please enter valid email</p>
+                    </span>
+                </div>
+                <div class="input password">
+                    <input type="password" placeholder="Enter Password" name="" id="inp-pass">
+                    <i class="uil uil-lock icon-password"></i>
+                    <i class="uil uil-eye-slash icon-eye-slash"></i>
+                </div>
+                <div class="input submit">
+                    <input type="submit"  value="Login" name="" id="button">
+    
+                </div>
             </div>
-            <div class="inputfield">
-                <input type="password" name="" placeholder="Enter your password" id="" required>
-                <i class="uil uil-lock"></i>
-            </div>
-            </form>
+        </form>
+        <div class="bottom-container">
+            <span>Don't have an account?<a href="signup.html">Signup now</a></span><span><a href="">Forgot Password</a></span>
         </div>
     </div>
 </div>
-</div>
+<script src="login.js"></script>
 </body>
 </html>
