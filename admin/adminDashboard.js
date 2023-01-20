@@ -1,8 +1,8 @@
 let globleData = []; 
-const url = "https://server-com-wzh0.onrender.com/products"
+
 counttheproducts()
 function counttheproducts(){
-
+let url = "https://server-com-wzh0.onrender.com/products"
 fetch("https://server-com-wzh0.onrender.com/products")
 .then((res)=>{
     return res.json()
@@ -48,11 +48,13 @@ document.getElementById("button").addEventListener("click",()=>{
     let Title = document.getElementById("Title")
     let Price = document.getElementById("Price")
     let Image = document.getElementById("Image-Url")
+    let Size = document.getElementById("size")
     let obj = {
         category : Category.value,
         title : Title.value,
         original_price : Price.value,
-        images : [Image.value]
+        images : [Image.value],
+        sizes : Size.value
     }
     fetch("https://server-com-wzh0.onrender.com/products",{
         method:'POST',
@@ -120,11 +122,11 @@ function deleteItem(id){
         headers:{
             'Content-Type': 'application/json'
         },
-        
+        // body: JSON.stringify(obj)
     })
     .then((res)=> res.json())
     .then((data)=>{
-        
+        // console.log(data);counttheproducts
         counttheproducts()
         alert("Item Deleted")
 
@@ -134,4 +136,58 @@ function deleteItem(id){
         alert("Item Not Deleted");
     })
 
+}
+
+// pending and completed
+
+
+let orderedData = JSON.parse(localStorage.getItem("pending-order")) || []
+let completeDat = JSON.parse(localStorage.getItem("complete-order")) || []
+let completeData=[]
+appendPending(orderedData)
+console.log(orderedData)
+appendComplete(completeDat)
+console.log(completeDat);
+
+
+function appendPending(data){
+    document.getElementById("pending").innerHTML = ""
+    data.forEach((ele,ind) => {
+        let div=document.createElement("div")
+        let title = document.createElement("h5")
+        title.innerText = ele.title
+        let price = document.createElement("p")
+        price.innerText =ele.original_price
+        let button = document.createElement("button")
+        button.innerText = "Ship Order"
+        button.addEventListener("click",()=>{
+            let confi = confirm("Confirm Ship Order")
+            if(confi){
+                completeDat.push(ele)
+                localStorage.setItem("complete-order",JSON.stringify(completeDat))
+                data.splice(ind,1)
+                appendPending(orderedData)
+                let temp = JSON.parse(localStorage.getItem("complete-order")) || []
+                appendComplete(temp)
+            }
+
+        })
+        div.append(title,price,button)
+        document.getElementById("pending").append(div)
+    });
+}
+
+
+function appendComplete(data){
+    document.getElementById("complete").innerHTML = ""
+    data.forEach((ele,ind) => {
+        let div=document.createElement("div")
+        let title = document.createElement("h5")
+        title.innerText = ele.title
+        let price = document.createElement("p")
+        price.innerText =ele.original_price
+        
+        div.append(title,price)
+        document.getElementById("complete").append(div)
+    });
 }
