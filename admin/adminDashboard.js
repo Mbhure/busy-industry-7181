@@ -1,8 +1,8 @@
 let globleData = []; 
-
+const url = "https://server-com-wzh0.onrender.com/products"
 counttheproducts()
 function counttheproducts(){
-let url = "https://server-com-wzh0.onrender.com/products"
+
 fetch("https://server-com-wzh0.onrender.com/products")
 .then((res)=>{
     return res.json()
