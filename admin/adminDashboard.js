@@ -82,7 +82,6 @@ document.getElementById('inpu').addEventListener('input',(e)=>{
     let inpu=e.target.value
     let newArr=globleData.filter((ele,ind)=>{
        return ele.title.toLowerCase().includes(inpu)
-        
     }) 
     if(inpu.length===0){
         document.getElementById("delete").innerHTML = ""
