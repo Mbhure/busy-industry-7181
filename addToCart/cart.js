@@ -28,7 +28,7 @@ function renderDom(data){
         let title = document.createElement('h4')
         title.innerText=ele.title
         let price = document.createElement('p')
-        price.innerText=`$ ${ele.price}`
+        price.innerText=`$ ${ele.original_price}`
         let inc = document.createElement('button')
         inc.innerText='+'
         inc.setAttribute("class", "incButton")
@@ -70,16 +70,16 @@ function renderDom(data){
 
 document.getElementById('checkout').addEventListener('click',()=>{
     console.log('yes');
-    localStorage.setItem('pending-order',JSON.stringify(orderedData))
-   
+    localStorage.setItem('pending-order',JSON.stringify(cartdata))
+    localStorage.setItem('cart',JSON.stringify([]))
 })
 
 function priceDom(data){
-    let total=0;
+    let total=29;
     let count=0
     for(let i=0;i<data.length;i++){
         count++
-        total+= data[i].qty*data[i].price 
+        total+= data[i].qty*data[i].original_price 
     }
     document.getElementById('total').innerText=total
     document.getElementById('tota').innerText=total

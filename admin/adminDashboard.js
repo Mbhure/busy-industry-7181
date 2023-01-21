@@ -90,8 +90,6 @@ document.getElementById('inpu').addEventListener('input',(e)=>{
         console.log(newArr)
         render(newArr)
     }
-    
-    
 })
 
 function render(data){
@@ -166,6 +164,7 @@ function appendPending(data){
                 completeDat.push(ele)
                 localStorage.setItem("complete-order",JSON.stringify(completeDat))
                 data.splice(ind,1)
+                localStorage.setItem("pending-order",JSON.stringify(orderedData))
                 appendPending(orderedData)
                 let temp = JSON.parse(localStorage.getItem("complete-order")) || []
                 appendComplete(temp)

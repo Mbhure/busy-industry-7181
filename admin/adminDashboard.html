@@ -261,31 +261,36 @@
 
     /*********************************************************/
 
-    .Add-Product{
+    .Add-Product {
       width: 50%;
       display: grid;
-      grid-template-columns: repeat(1,1fr);
+      grid-template-columns: repeat(1, 1fr);
       margin-left: 30%;
     }
-    .Add-Product button{
+
+    .Add-Product button {
       width: 20%;
       margin: auto;
     }
 
-    #main ,  #main1{
+    #main,
+    #main1 {
       width: 80%;
       display: flex;
       margin: auto;
       text-align: center;
     }
-    #main input{
+
+    #main input {
       width: 80%;
       margin: auto;
     }
-    .Completed-orders{
+
+    .Completed-orders {
       width: 50%;
       margin-left: 30%;
     }
+
     /* "id": 1000,
             "category": "Sarees",
             "title": "WETLESS RAINBOW ZARI",
@@ -308,7 +313,6 @@
             },
             "rating": 3.9,
             "seller_id": 1 */
-
   </style>
 </head>
 
@@ -706,7 +710,7 @@
       </div>
     </div>
   </header>
-  
+
   <div id="main">
     <div class="Product-Details">
       <table>
@@ -729,30 +733,31 @@
       <input type="number" placeholder="Price" id="Price">
       <input type="url" placeholder="Image Url" id="Image-Url">
       <input type="text" placeholder="size" id="size">
-      <button id="button">Add  Product</button>
+      <button id="button">Add Product</button>
     </div>
   </div>
   <div id="main1">
-    
-        <div class="Product-Details" id="pending">
-      <h2>Pending orders</h2>
+    <h2>Pending orders</h2>
+    <div class="Product-Details" id="pending">
+
       <table>
         <tr>
           <td>Serial No.</td>
           <td>Order</td>
           <td>Status</td>
         </tr>
-        <tr id="order-status" >
-          
+        <tr id="order-status">
+
         </tr>
 
       </table>
     </div>
+    <h2>Completed Orders</h2>
     <div class="Completed-orders" id="complete">
-      <h2>Completed Orders</h2>
-       
+
+
     </div>
-    
+
   </div>
 
   <div>
@@ -764,4 +769,5 @@
   </div>
 </body>
 <script src="./adminDashboard.js"></script>
+
 </html>
