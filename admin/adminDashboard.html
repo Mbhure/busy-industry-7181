@@ -265,7 +265,6 @@
       width: 50%;
       display: grid;
       grid-template-columns: repeat(1, 1fr);
-      margin-left: 30%;
     }
 
     .Add-Product button {
@@ -275,10 +274,12 @@
 
     #main,
     #main1 {
-      width: 80%;
+      
       display: flex;
       margin: auto;
       text-align: center;
+      justify-content: space-evenly;
+      width: 90%;
     }
 
     #main input {
@@ -290,6 +291,7 @@
       width: 50%;
       margin-left: 30%;
     }
+   
 
     /* "id": 1000,
             "category": "Sarees",
@@ -317,7 +319,7 @@
 </head>
 
 <body>
-  <header class="header">
+  <!-- <header class="header">
     <div class="container">
       <div class="row v-center">
         <div class="header-item item-left">
@@ -709,10 +711,11 @@
         </div>
       </div>
     </div>
-  </header>
+  </header> -->
 
   <div id="main">
     <div class="Product-Details">
+      <h2>Fashion-Hub Products</h2>
       <table>
         <thead>
           <tr>
@@ -728,12 +731,19 @@
     </div>
 
     <div class="Add-Product">
+      <h2>Add New Products</h2>
       <input type="text" placeholder="Category" id="Category">
       <input type="text" placeholder="Title" id="Title">
       <input type="number" placeholder="Price" id="Price">
       <input type="url" placeholder="Image Url" id="Image-Url">
       <input type="text" placeholder="size" id="size">
       <button id="button">Add Product</button>
+    </div>
+    <div>
+      <h2>Delete Products</h2>
+      <input type="text" placeholder="title" id="inpu">
+      <button id="search">Search</button>
+      <div id="delete"></div>
     </div>
   </div>
   <div id="main1">
@@ -760,13 +770,7 @@
 
   </div>
 
-  <div>
-    <input type="text" placeholder="title" id="inpu">
-    <button id="search">Search</button>
-    <div id="delete">
-
-    </div>
-  </div>
+ 
 </body>
 <script src="./adminDashboard.js"></script>
 
