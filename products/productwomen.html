@@ -25,7 +25,7 @@
       }
 
       .container {
-        max-width: 1200px;
+        max-width: 1400px;
         background-color: white;
         margin: auto;
       }
@@ -52,10 +52,15 @@
       .header {
         display: block;
         width: 100%;
-        position: relative;
-        z-index: 99;
-        padding: 15px;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        position: fixed;
+        z-index: 100;
+         padding: 15px; 
+         box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 0px;
+        
+        
+        /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+        margin-top: -130px;
+       /* height: 500px; */
       }
 
       .header .logo a {
@@ -67,16 +72,22 @@
 
       .header .item-left {
         flex: 0 0 17%;
+        padding-top: 60px;
+        padding-bottom: 5px;
       }
 
       .header .item-center {
         flex: 0 0 45%;
+        padding-top: 60px;
+        padding-bottom: 5px;
       }
 
       .header .item-right {
         flex: 5 0 17%;
         display: flex;
         justify-content: flex-end;
+        padding-top: 60px;
+        padding-bottom: 5px;
       }
 
       .header .menus > ul > li {
@@ -260,6 +271,7 @@
 
         display: flex;
         justify-content: space-between;
+        
       }
 
       .pro-a {
@@ -465,6 +477,9 @@
         width: 10px;
         border: 5px solid white;
         background-color: green;
+      }
+      #product-body{
+        margin-top: 60px;
       }
     </style>
   </head>
@@ -829,9 +844,11 @@
           <div class="header-item item-right">
             <nav class="menus">
               <ul class="menus-main">
-                <li><a href="#">✏️ Scrapbook</a></li>
+                
+                <input type="text" placeholder="Search" id="inpu">
+                <button >🔍</button>
 
-                <li><a href="#">🔍 Search</a></li>
+               
                 <li><a href="#">🛒 Cart</a></li>
                 <li class="menu-item-has-children">
                   <a href="#">🤵🏾 Profile</a>
@@ -865,7 +882,7 @@
         </div>
       </div>
     </header>
-
+     <div id="product-body">
     <div class="pro-container">
       <div class="pro-a">
         <h4>Sort Our Products By</h4>
@@ -971,6 +988,7 @@
         <div id="pro-b"></div>
       </div>
     </div>
+  </div>
   </body>
 </html>
 
@@ -1121,7 +1139,7 @@ let category = () => {
      
     }
 
-
+     
     let s = () => {
       
       let siz = document.querySelector("input[name='size']:checked").value;
@@ -1144,6 +1162,25 @@ let category = () => {
 
      
     }
+
+    //Search Functionality
+
+    document.getElementById('inpu').addEventListener('input',(e)=>{
+    //console.log("yes");
+
+    let inpu=e.target.value
+    let newArr=bag.filter((ele,ind)=>{
+       return ele.title.toLowerCase().includes(inpu)
+        
+    }) 
+    if(inpu.length===0){
+        //document.getElementById("pro-b").innerHTML = ""
+       displaytable(bag)
+    }else{
+        //console.log(newArr)
+        displaytable(newArr)
+    }
+})
 
 
 </script>
