@@ -1,6 +1,9 @@
 let passwordIcon=document.querySelector('.icon-eye-slash');
-let passwordInput=document.querySelector('#inp-pass');
+let passwordInput=document.getElementById('inp-pass');
 let formData=document.getElementById('formData');
+let email=document.getElementById('inp-email');
+let password=document.getElementById('inp-pass');
+
 
 // show hide password
 passwordIcon.addEventListener('click',()=>{
@@ -19,9 +22,26 @@ let usersData=JSON.parse(localStorage.getItem('users'))||[];
 
 formData.addEventListener('submit',(event)=>{
     event.preventDefault();
-for(let user of usersData){
-    if(user.name===inputName|| user.password===inputPassword){
-     
+let use=verifyUsers(email.value,password.value,usersData);
+
+    if(email.value==='admin@gmail.com'&&password.value==='admin'){
+        alert('Admin login sucssesful');
+        window.location.assign('dummyAdmin.html')
+    }else if(verifyUsers(email.value,password.value,usersData)){
+     alert('login succssesful')
+    }else{
+        alert('invalid credintials')
+        return;
     }
-}
 })
+
+function verifyUsers(name,password,arr){
+
+    for(let i=0;i<arr.length;i++){
+        if(name===arr[i].name&&password===arr[i].password){
+          return true;
+        }
+    }
+
+    return false;
+}
