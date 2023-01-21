@@ -976,7 +976,7 @@
 
 <script>
   let bag = [];
-
+  let cartData = JSON.parse(localStorage.getItem("cart")) || []
   let url = "https://server-com-wzh0.onrender.com/products";
 
   async function getdata() {
@@ -1017,12 +1017,17 @@
       let rating = document.createElement("p");
       rating.innerText = "Rating" + ":" + " " + ele.rating + "⭐";
 
-      let size = document.createElement("p");
+      let size = document.createElement("p"); 
       size.innerText = "Size" + ":" + " " + ele.sizes[0];
 
       let button = document.createElement("button")
       button.innerText = "Add To Cart"
+      button.addEventListener("click",()=>{
+      cartData.push({...ele , qty:1})
+      localStorage.setItem("cart",JSON.stringify(cartData))
+      alert("Product Added to Cart")
 
+      })
       div.append(image, title, category, price, rating, size , button);
       document.getElementById("pro-b").append(div);
     });
