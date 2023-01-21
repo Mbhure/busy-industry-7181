@@ -22,26 +22,35 @@ let usersData=JSON.parse(localStorage.getItem('users'))||[];
 
 formData.addEventListener('submit',(event)=>{
     event.preventDefault();
-let use=verifyUsers(email.value,password.value,usersData);
+// let use=verifyUsers(email.value,password.value,usersData);
 
     if(email.value==='admin@gmail.com'&&password.value==='admin'){
-        alert('Admin login sucssesful');
-        window.location.assign('dummyAdmin.html')
+        alert('Admin login successful');
+        window.location.href='dummyAdmin.html';
     }else if(verifyUsers(email.value,password.value,usersData)){
-     alert('login succssesful')
+     alert('login successful');
+     window.location.href='afterlogin.html';
     }else{
         alert('invalid credintials')
-        return;
     }
 })
 
-function verifyUsers(name,password,arr){
-
+ var userName;
+function verifyUsers(email,password,arr){
+    let flag=false;
     for(let i=0;i<arr.length;i++){
-        if(name===arr[i].name&&password===arr[i].password){
-          return true;
+       
+        if(email===arr[i].email&&password===arr[i].password){
+        (userName=arr[i].name);
+          localStorage.setItem('userName',userName);
+         flag=true;
+          break;
         }
     }
-
+if(flag){
+    return true
+}else{
     return false;
+}
+    
 }

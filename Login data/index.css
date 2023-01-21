@@ -84,3 +84,75 @@ justify-content: center;
     text-decoration: none;
     color: white;
 }
+
+@media all and (min-width: 650px) and (max-width: 1024px) {
+    
+.form{
+
+    display: flex;
+    justify-content: center;
+
+}
+
+ .formInnerContainer{
+    width: 400px;
+ }
+.shopbycategory{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    margin-bottom: 15px;
+
+}
+.shopbycategory>div{
+    display: flex;
+    height:25px;
+    width: 150px;
+    border: 2px solid greenyellow;
+    align-items: center;
+justify-content: center;
+   background-color: greenyellow;
+   color: black;
+   font-weight: bolder;
+   font-size: 13px;
+   border-radius: 10px;
+   
+}
+
+.logIn:hover,.shopbycategory>div:hover{
+    cursor: pointer;
+}
+
+
+/* margin-padding starts */
+#headImg{
+    margin-top: 80px;
+    margin-bottom: 70px;
+}
+.formInnerContainer p+p{
+    margin-bottom: 70px;
+}
+/* font size of p */
+.formInnerContainer .para{
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+#headImg{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+.formInnerContainer p:last-child{
+    color: white;
+    font-size:15px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Anchor tag style */
+.logIn>a[href='login.html']{
+    text-decoration: none;
+    color: white;
+}
+}

@@ -1,7 +1,18 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     font-family: 'Poppins','sans-serif';
 }
+
+body {
+    background:rgba(0, 0, 0, 0.361)url(https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center;
+background-blend-mode: darken;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -12,7 +23,7 @@
     margin-top: 50px;
     height: 490px;
     width: 450px;
-    background-color: rgba(40, 183, 215, 0.276);
+    background-color:#E3F2FD;
     border-radius: 10px;
 }
 .formbody span h1{
@@ -92,4 +103,8 @@ border-radius: 5px;
 .bottom-container a:hover{
     text-decoration: underline;
     font-size: 13px;
+}
+
+@media all and (min-width: 650px) and (max-width: 1024px){
+    
 }

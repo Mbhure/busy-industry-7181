@@ -2,6 +2,17 @@
 *{
     font-family: 'Poppins','sans-serif';
 }
+
+body {
+    background:rgb(0, 0, 0, 0.361)url(https://images.pexels.com/photos/5632402/pexels-photo-5632402.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    background-position: center;
+background-blend-mode: darken;
+}
+
 .container{
     display: flex;
     justify-content: center;
@@ -12,7 +23,7 @@
     margin-top: 25px;
     height: 650px;
     width: 470px;
-    background-color: rgba(40, 183, 215, 0.276);
+    background-color: #E3F2FD;
     border-radius: 10px;
 }
 .formbody span h1{
@@ -93,4 +104,18 @@ border-radius: 5px;
 .bottom-container a:hover{
     text-decoration: underline;
     font-size: 13px;
+}
+#hide{
+    visibility: hidden;
+}
+.input{
+    position: relative;
+}
+.input i,.input input{
+    position: relative;
+}
+.error{
+position: absolute;
+left: 20px;
+bottom:-45px;
 }
