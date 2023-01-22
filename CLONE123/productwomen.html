@@ -505,7 +505,7 @@
         <div class="row v-center">
           <div class="header-item item-left">
             <div class="logo">
-              <a href="Women.html">Fashion Hub</a>
+              <a href="Women.html"><img src="logoss1.png" alt="" style="width: 60%;"></a>
             </div>
           </div>
           <div class="header-item item-center">
@@ -1006,7 +1006,7 @@
   </div>
   </body>
 </html>
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   let bag = [];
   let cartData = JSON.parse(localStorage.getItem("cart")) || []
@@ -1058,7 +1058,13 @@
       button.addEventListener("click",()=>{
       cartData.push({...ele , qty:1})
       localStorage.setItem("cart",JSON.stringify(cartData))
-      alert("Product Added to Cart")
+      Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Product Added to Cart',
+                showConfirmButton: false,
+                timer: 1500
+              })
 
       })
       div.append(image, title, category, price, rating, size , button);

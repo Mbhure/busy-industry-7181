@@ -66,8 +66,11 @@ document.getElementById("button").addEventListener("click",()=>{
     .then((res)=> res.json())
     .then((data)=>{
         console.log(data);
-        alert("Product added")
-        location.reload()
+        // alert("Product added")
+        Swal.fire('New Product Added')
+        setTimeout(()=>{
+            location.reload() 
+        },3000)
     })
     .catch((err)=>{
         console.log(err);
@@ -106,11 +109,28 @@ function render(data){
         let button = document.createElement("button")
         button.innerText = "Delete"
         button.addEventListener("click",()=>{
-            let confi = confirm("Confirm Delete")
-            if(confi){
-                deleteItem(ele.id)
-                console.log(ele.id);
-            }
+            let confi = Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Deleted!',
+                    'Your file has been deleted.',
+                    'success'
+                  )
+                }
+                if(result.isConfirmed){
+                    deleteItem(ele.id)
+                    console.log(ele.id);
+                }
+              })
+           
         })
         div.append(deldiv,price,button)
         document.getElementById("delete").append(div)
@@ -129,7 +149,7 @@ function deleteItem(id){
     .then((data)=>{
         // console.log(data);counttheproducts
         counttheproducts()
-        alert("Item Deleted")
+        // alert("Item Deleted")
 
     })
     .catch((err)=>{
@@ -175,7 +195,13 @@ function appendPending(data){
         let button = document.createElement("button")
         button.innerText = "Ship Order"
         button.addEventListener("click",()=>{
-            let confi = confirm("Confirm Ship Order")
+            let confi = Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Order Shipped',
+                showConfirmButton: false,
+                timer: 1500
+              })
             if(confi){
                 completeDat.push(ele)
                 localStorage.setItem("complete-order",JSON.stringify(completeDat))
