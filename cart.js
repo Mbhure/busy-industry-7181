@@ -72,7 +72,9 @@ document.getElementById('checkout').addEventListener('click',()=>{
     console.log('yes');
     localStorage.setItem('pending-order',JSON.stringify(cartdata))
     localStorage.setItem('cart',JSON.stringify([]))
-    location.reload()
+    location.href="payment.html"
+    // location.reload()
+    
 })
 
 function priceDom(data){
