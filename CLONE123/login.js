@@ -18,6 +18,11 @@ passwordIcon.addEventListener('click',()=>{
 })
 
 // verifying userdata
+let loginStatus=localStorage.getItem('loginStatus')
+if(loginStatus===undefined){
+  loginStatus='false';
+}
+
 let usersData=JSON.parse(localStorage.getItem('users'))||[];
 formData.addEventListener('submit',(event)=>{
     event.preventDefault();
@@ -27,7 +32,10 @@ formData.addEventListener('submit',(event)=>{
         alert('Admin login successful');
         window.location.href='adminDashboard.html';
     }else if(verifyUsers(email.value,password.value,usersData)){
+        localStorage.setItem('loginStatus','true');
      alert('login successful');
+     let loginStatus=localStorage.getItem('loginStatus');
+    localStorage.setItem('loginStatus','true');
      window.location.href='Women.html';
     }else{
         alert('invalid credintials')
