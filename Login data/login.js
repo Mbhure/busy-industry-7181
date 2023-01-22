@@ -19,7 +19,6 @@ passwordIcon.addEventListener('click',()=>{
 
 // verifying userdata
 let usersData=JSON.parse(localStorage.getItem('users'))||[];
-
 formData.addEventListener('submit',(event)=>{
     event.preventDefault();
 // let use=verifyUsers(email.value,password.value,usersData);

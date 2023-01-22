@@ -57,11 +57,11 @@ function verifyUsers(email,arr){
  return false;
 }
 
-let name1=formData.firstName.value;
-let name2=formData.lastName.value;
-let pass1=formData.pass1.value;
-let pass2=formData.pass2.value;
-let emailData=formData.email.value;
+// let name1=formData.firstName.value;
+// let name2=formData.lastName.value;
+// let pass1=formData.pass1.value;
+// let pass2=formData.pass2.value;
+// let emailData=formData.email.value;
 
 // formData.addEventListener('submit',(event)=>{
 //     event.preventDefault();
