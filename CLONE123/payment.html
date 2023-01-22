@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(https://png.pngtree.com/background/20210711/original/pngtree-blue-mobile-phone-scan-code-payment-technology-banner-background-picture-image_1126024.jpg);
+      }
+      #third {
+        display: flex;
+        justify-content: center;
+      }
+
+      #third > img {
+        cursor: pointer;
+        width: 95%;
+        height: 190px;
+        /* border-radius: 10px; */
+      }
+
+      #paid {
+        display: flex;
+        /* justify-content: center; */
+      }
+
+      #paid > form > input {
+        width: 250%;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        border: 2px solid black;
+        margin-left: 20px;
+      }
+
+      #paid > form > p {
+        font-size: large;
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 20px;
+      }
+
+      #txt > div {
+        display: flex;
+        /* justify-content: center; */
+      }
+
+      #txt > div > h2 {
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 38%;
+      }
+
+      #txt > div > p {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      #fullpay {
+        width: 45%;
+        /* text-align: center; */
+        /* border: 2px solid black; */
+        /* justify-content: center; */
+        padding-left: 30%;
+
+        padding-right: 25%;
+      }
+
+      #paya {
+        border-radius: 15px;
+        padding-left: 3%;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        background-color: whitesmoke;
+        opacity: 80%;
+      }
+
+      #pic {
+        width: 20%;
+        /* margin-top: 50px; */
+        position: relative;
+      }
+      #pic > img {
+        width: 100%;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="pic">
+      <img src="logoss1.png" alt="" />
+    </div>
+    <div id="fullpay">
+      <div id="paya">
+        <div id="txt">
+          <div>
+            <h2>Payment</h2>
+          </div>
+
+          <div>
+            <p>Accepted Cards</p>
+          </div>
+
+          <div>
+            <img
+              src="https://www.naturesbasket.co.in/Images/icons-card-payments-mode.png"
+              alt=""
+            />
+          </div>
+        </div>
+
+        <div id="paid">
+          <form id="form">
+            <p>Name on Card</p>
+            <input type="text" placeholder="Enter your name" id="name" />
+            <p>Card Number</p>
+            <input type="number" placeholder="Card Number" id="number" />
+            <p>Exp Month</p>
+            <input type="text" placeholder="Exp month" id="month" />
+            <p>Exp Year</p>
+            <input type="number" placeholder="Exp year" id="year" />
+            <p>CVV</p>
+            <input type="number" placeholder="Cvv" id="cvv" />
+            <br />
+            <br />
+            <!-- 
+                  <button
+                    style="
+                      text-align: center;
+                     
+                     
+                      
+                     
+                      
+                     
+                    "
+                  >
+                    PAY NOW
+                  </button> -->
+
+            <input
+              type="submit"
+              value="PAY NOW"
+              style="
+                background-color: #99c655;
+                border-radius: 5px;
+                border-color: white;
+                color: white;
+                /* width: 50%;
+                      height: 5%;
+                      margin-left: 120%; */
+              "
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script>
+  let form = document.querySelector("#form");
+
+  let lsdata = JSON.parse(localStorage.getItem("payment")) || [];
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); //preventing form from refreshing
+
+    //   document.querySelector("#task-count").textContent = count
+    let obj = {
+      tn: form.name.value,
+      number: form.number.value,
+      month: form.month.value,
+      year: form.year.value,
+      cvv: form.cvv.value,
+    };
+
+    if (obj.number == 123456789321 && obj.cvv == 321 && obj.year >= 2023) {
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "OTP Sent",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      //alert("Otp sent to your Mobile Number")
+      setTimeout(() => {
+        location.href = "payotp.html";
+      }, 2500);
+    } else {
+      //alert("Wrong Input check your Card Number , CVV or Year");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Please Check Your Details!",
+        footer: '<a href="">Why do I have this issue?</a>',
+      });
+    }
+
+    if (
+      obj.tn == "" ||
+      obj.number == "" ||
+      obj.month == "" ||
+      obj.year == "" ||
+      obj.cvv == ""
+    ) {
+      // alert("");
+      Swal.fire({
+        position: "center",
+        icon: "warning",
+        title: "Please Fill All The Fields",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    } else {
+      lsdata.push(obj);
+      localStorage.setItem("payment", JSON.stringify(lsdata));
+    }
+  });
+
+  let b = document.getElementById("log");
+  b.addEventListener("click", function () {
+    location.href = "index.html";
+  });
+</script>
