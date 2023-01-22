@@ -1,12 +1,12 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-.logo{
+/* .logo{
     margin-top: 5px;
     margin-left: 30%;
     width: 400px;
     height: 200px;
-}
+} */
 
 .nav{
     margin-top: 2%;
@@ -21,6 +21,7 @@
     padding: 3%;
     margin: auto;
     margin-top: 50px;
+   
 }
 #product-dom{
     width: 80%;
@@ -45,8 +46,15 @@
     height: 40px;
     margin: auto;
     margin: 20px 0px;
-    background-color: black;
-    color: white;
+    background-color: #EEEEEE;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.checkout:hover{
+  background-color: #212121;
+  color: white;
 }
 .pdiv{
     display: flex;
@@ -93,4 +101,10 @@
       .overview{
       width: 96%;
       }
+  }
+
+
+  #grey{
+    background-color: #EEEEEE;
+    margin-top: -20px;
   }
