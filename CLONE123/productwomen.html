@@ -871,7 +871,8 @@
                     <div class="list-item">
                       <h5 id="UpdateName">WELCOME!</h5>
                       <h6>To View Account Details</h6>
-                      <button>LOGIN</button>
+                      <button id="loginbtn">LOGIN</button>
+                      <!-- *********************************************************************************** -->
 
                       <ul>
                         <li><a href="#">ORDERS</a></li>
@@ -1008,6 +1009,13 @@
 </html>
 
 <script>
+
+let loginStatus=localStorage.getItem('loginStatus')
+if(loginStatus===undefined){
+  loginStatus='false';
+}
+
+
   let bag = [];
   let cartData = JSON.parse(localStorage.getItem("cart")) || []
   let url = "https://server-com-wzh0.onrender.com/products";
@@ -1055,10 +1063,17 @@
 
       let button = document.createElement("button")
       button.innerText = "Add To Cart"
+      // ***********************************************************************************************
       button.addEventListener("click",()=>{
-      cartData.push({...ele , qty:1})
-      localStorage.setItem("cart",JSON.stringify(cartData))
-      alert("Product Added to Cart")
+        if(loginStatus==='false'){
+          alert('Please login...');
+        }else if(loginStatus==='true'){
+          cartData.push({...ele , qty:1})
+          localStorage.setItem("cart",JSON.stringify(cartData))
+          alert("Product Added to Cart")
+
+        }
+      
 
       })
       div.append(image, title, category, price, rating, size , button);
@@ -1207,6 +1222,31 @@ let category = () => {
         displaytable(newArr)
     }
 })
+let loginbtn=document.getElementById('loginbtn');
+//     let loginStatus=localStorage.getItem('loginStatus')
+// if(loginStatus===undefined){
+//   loginStatus='false';
+// }
 
+if(loginStatus==='true'){
+  loginbtn.innerText='LOGOUT';
+  let Name = localStorage.getItem("userName")
+    console.log(Name)
+    document.getElementById("UpdateName").innerText =  Name
+}else{
+    document.getElementById("UpdateName").innerText ='WELCOME!';
+  loginbtn.innerText='LOGIN';
+}
+loginbtn.addEventListener('click',()=>{
+ if(loginStatus==='true'){
+  localStorage.setItem('loginStatus','false')
+  loginbtn.innerText='LOGIN';
+  window.location.href='index.html';
+ }else if(loginStatus==='false'){
+    localStorage.setItem('loginStatus','false');
+    window.location.href='index.html';
+ }
+  
+})
 
 </script>
