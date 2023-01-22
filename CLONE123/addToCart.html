@@ -641,8 +641,8 @@
                   <div class="list-item">
                     <h5 id="UpdateName">WELCOME!</h5>
                     <h6>To View Account Details</h6>
-                    <button>LOGIN</button>
-
+                    <button id="loginbtn">LOGIN</button>
+<!-- ************************************************************************************************* -->
                     <ul>
                       <li><a href="#">ORDERS</a></li>
                       <li><a href="#">RETURN REPLACEMENT</a></li>
@@ -707,6 +707,35 @@
   </div>
 
 </body>
-<script src="./cart.js"></script>
+<script src="./cart.js">
+
+      let loginStatus=localStorage.getItem('loginStatus')
+if(loginStatus===undefined){
+  loginStatus='false';
+}
+
+  let loginbtn=document.getElementById('loginbtn');
+
+if(loginStatus==='true'){
+  loginbtn.innerText='LOGOUT';
+  let Name = localStorage.getItem("userName")
+    console.log(Name)
+    document.getElementById("UpdateName").innerText =  Name
+}else{
+    document.getElementById("UpdateName").innerText ='WELCOME!';
+  loginbtn.innerText='LOGIN';
+}
+loginbtn.addEventListener('click',()=>{
+ if(loginStatus==='true'){
+  localStorage.setItem('loginStatus','false')
+  loginbtn.innerText='LOGIN';
+  window.location.href='index.html';
+ }else if(loginStatus==='false'){
+    localStorage.setItem('loginStatus','false');
+    window.location.href='index.html';
+ }
+  
+})
+</script>
 
 </html>
