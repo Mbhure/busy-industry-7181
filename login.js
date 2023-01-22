@@ -18,20 +18,27 @@ passwordIcon.addEventListener('click',()=>{
 })
 
 // verifying userdata
+let loginStatus=localStorage.getItem('loginStatus')
+if(loginStatus===undefined){
+  loginStatus='false';
+}
 let usersData=JSON.parse(localStorage.getItem('users'))||[];
 formData.addEventListener('submit',(event)=>{
     event.preventDefault();
 // let use=verifyUsers(email.value,password.value,usersData);
 
-    if(email.value==='admin@gmail.com'&&password.value==='admin'){
-        alert('Admin login successful');
-        window.location.href='adminDashboard.html';
-    }else if(verifyUsers(email.value,password.value,usersData)){
-     alert('login successful');
-     window.location.href='Women.html';
-    }else{
-        alert('invalid credintials')
-    }
+if(email.value==='admin@gmail.com'&&password.value==='admin'){
+    alert('Admin login successful');
+    window.location.href='adminDashboard.html';
+}else if(verifyUsers(email.value,password.value,usersData)){
+    localStorage.setItem('loginStatus','true');
+ alert('login successful');
+ let loginStatus=localStorage.getItem('loginStatus');
+localStorage.setItem('loginStatus','true');
+ window.location.href='Women.html';
+}else{
+    alert('invalid credintials')
+}
 })
 
  var userName;

@@ -996,6 +996,11 @@
 
 </html>
 <script>
+       let loginStatus=localStorage.getItem('loginStatus')
+if(loginStatus===undefined){
+  loginStatus='false';
+}
+
     let slideIndex = 0;
     showSlides();
 
@@ -1017,4 +1022,27 @@
         dots[slideIndex - 1].className += " active";
         setTimeout(showSlides, 2000); // Change image every 2 seconds
     }
+    let loginbtn=document.getElementById('loginbtn');
+
+    if(loginStatus==='true'){
+  loginbtn.innerText='LOGOUT';
+  let Name = localStorage.getItem("userName")
+    console.log(Name)
+    document.getElementById("UpdateName").innerText =  Name
+}else{
+    document.getElementById("UpdateName").innerText ='WELCOME!';
+  loginbtn.innerText='LOGIN';
+}
+loginbtn.addEventListener('click',()=>{
+ if(loginStatus==='true'){
+  localStorage.setItem('loginStatus','false')
+  loginbtn.innerText='LOGIN';
+  window.location.href='index.html';
+ }else if(loginStatus==='false'){
+    localStorage.setItem('loginStatus','false');
+    window.location.href='index.html';
+ }
+  
+})
+
 </script>
