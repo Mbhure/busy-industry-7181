@@ -95,10 +95,14 @@ function render(data){
     document.getElementById("delete").innerHTML = ""
     data.forEach((ele,ind) => {
         let div=document.createElement("div")
+
+        let deldiv = document.createElement("div")
+        deldiv.setAttribute("class" , "deldiv")
         let title = document.createElement("h5")
         title.innerText = ele.title
+        deldiv.append(title)
         let price = document.createElement("p")
-        price.innerText =ele.original_price
+        price.innerText = "Rs." + " " + ele.original_price
         let button = document.createElement("button")
         button.innerText = "Delete"
         button.addEventListener("click",()=>{
@@ -108,7 +112,7 @@ function render(data){
                 console.log(ele.id);
             }
         })
-        div.append(title,price,button)
+        div.append(deldiv,price,button)
         document.getElementById("delete").append(div)
     });
 }
@@ -151,10 +155,23 @@ function appendPending(data){
     document.getElementById("pending").innerHTML = ""
     data.forEach((ele,ind) => {
         let div=document.createElement("div")
+
+        let titdiv = document.createElement("div")
+        titdiv.setAttribute("class", "titlediv")
         let title = document.createElement("h5")
         title.innerText = ele.title
+        titdiv.append(title)
+        
+        let image = document.createElement("img")
+        image.src = ele.images[0]
+
+
+        let pdiv = document.createElement("div")
+        pdiv.setAttribute("class" , "pdiv")
         let price = document.createElement("p")
-        price.innerText =ele.original_price
+        price.innerText = "Rs." + " " + ele.original_price
+        pdiv.append(price)
+        
         let button = document.createElement("button")
         button.innerText = "Ship Order"
         button.addEventListener("click",()=>{
@@ -170,7 +187,7 @@ function appendPending(data){
             }
 
         })
-        div.append(title,price,button)
+        div.append(image, titdiv,pdiv,button)
         document.getElementById("pending").append(div)
     });
 }
@@ -180,12 +197,17 @@ function appendComplete(data){
     document.getElementById("complete").innerHTML = ""
     data.forEach((ele,ind) => {
         let div=document.createElement("div")
+        let titdiv = document.createElement("div")
+        titdiv.setAttribute("class", "titediv")
         let title = document.createElement("h5")
         title.innerText = ele.title
+        titdiv.append(title)
+        let image = document.createElement("img")
+        image.src = ele.images[0]
         let price = document.createElement("p")
-        price.innerText =ele.original_price
+        price.innerText = "Rs." + " " + ele.original_price
         
-        div.append(title,price)
+        div.append(image, titdiv,price)
         document.getElementById("complete").append(div)
     });
 }
