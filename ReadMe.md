@@ -41,7 +41,7 @@
 <!-- check out -->
 <h1 align="center">CHECKOUT PAGE</h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/214016260-498c2f10-4ad9-4ded-a3f1-31e665f863f5.jpeg" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214030984-faf7130d-7582-444d-95c6-55505f029b42.png" width="100%"><br>
 
 <!-- payment -->
 <h1 align="center">PAYMENT PAGE</h1>
