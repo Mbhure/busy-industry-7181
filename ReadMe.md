@@ -1,9 +1,9 @@
-<h1 align="center">CLONE OF ABOF E-COMMERCE WEBSITE</h1>
+<h1 align="center">CLONE OF LimeRoad E-COMMERCE WEBSITE</h1>
 <img src="https://user-images.githubusercontent.com/115465871/213980137-578b8b38-f647-4c02-886f-133bbbcbea4e.jpeg" width="100%" ><br>
-<h1 align="center" >FASHION FUSION</h1>
+<h1 align="center" >Fashion Holic</h1>
 
 
-<img align="right" alt="coding" width="400" src="https://thumbs.gfycat.com/ContentHeftyGuillemot-size_restricted.gif"> <br>
+<img alt="Coder GIF" height=250 width=350 src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" /> <br>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=prititi&label=Profile%20views&color=0e75b6&style=flat" alt="prititi" /> </p>
 
