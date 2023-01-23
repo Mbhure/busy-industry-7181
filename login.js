@@ -28,16 +28,49 @@ formData.addEventListener('submit',(event)=>{
 // let use=verifyUsers(email.value,password.value,usersData);
 
 if(email.value==='admin@gmail.com'&&password.value==='admin'){
-    alert('Admin login successful');
-    window.location.href='adminDashboard.html';
+    // alert('Admin login successful');
+    Swal.fire({
+        title: 'Admin login successful',
+        showClass: {
+          popup: 'animate__animated animate__fadeInDown'
+        },
+        hideClass: {
+          popup: 'animate__animated animate__fadeOutUp'
+        }
+      })
+      setTimeout(()=>{
+        window.location.href='adminDashboard.html';
+      },2000)
+   
 }else if(verifyUsers(email.value,password.value,usersData)){
     localStorage.setItem('loginStatus','true');
- alert('login successful');
+
+//  alert('');
+
+ Swal.fire({
+    title: 'Login Successful',
+    showClass: {
+      popup: 'animate__animated animate__fadeInDown'
+    },
+    hideClass: {
+      popup: 'animate__animated animate__fadeOutUp'
+    }
+  })
+
  let loginStatus=localStorage.getItem('loginStatus');
 localStorage.setItem('loginStatus','true');
- window.location.href='Women.html';
+  setTimeout(()=>{
+    window.location.href='Women.html';
+  },2000)
+ 
 }else{
-    alert('invalid credintials')
+    // alert('invalid credintials')
+    Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Invalid Credintials!!',
+        footer: '<a href=""></a>'
+      })
 }
 })
 

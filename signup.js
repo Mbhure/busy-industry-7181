@@ -39,12 +39,21 @@ formData.addEventListener('submit',(event)=>{
     }
 
         if(verifyUsers(user.email,usersData)){
-            alert('Already have an account please login')
+            // alert('Already have an account please login')
+            Swal.fire(
+                '',
+                'Already Have an account PLEASE LOGIN',
+                'question'
+              )
         }else{
             usersData.push(user);
             localStorage.setItem('users',JSON.stringify(usersData));
-            alert('Account created successfully');
-            window.location.href='login.html';
+            // alert('Account created successfully')
+            Swal.fire('Account created successfully');
+            setTimeout(()=>{
+                window.location.href='login.html';
+            },1000)
+            
         }
     })
    
