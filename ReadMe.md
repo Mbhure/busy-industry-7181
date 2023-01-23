@@ -41,17 +41,17 @@
 <!-- check out -->
 <h1 align="center">CHECKOUT PAGE</h1>
 
-<img src="https://user-images.githubusercontent.com/115607523/214030984-faf7130d-7582-444d-95c6-55505f029b42.png" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214031779-ec0d9aae-8fc2-41ca-8261-645ad38cb402.png" width="100%"><br>
 
 <!-- payment -->
 <h1 align="center">PAYMENT PAGE</h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/214016749-5aecc73c-309f-48da-97d0-025ac7825c58.jpeg" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214030984-faf7130d-7582-444d-95c6-55505f029b42.png" width="100%"><br>
 
 <!-- admin page -->
 <h1 align="center">ADMIN PAGE</h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/213983223-b26bdf4d-ac11-4921-bd20-043166b12bb5.jpeg" width="100%"><br>
+<img src="Admin](https://user-images.githubusercontent.com/115607523/214032077-55503c91-6598-49d9-8831-4e8e414b8edd.png" width="100%"><br>
 
 
 
