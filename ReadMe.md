@@ -1,5 +1,5 @@
 <h1 align="center">CLONE OF LimeRoad E-COMMERCE WEBSITE</h1>
-<img src="https://user-images.githubusercontent.com/115465871/213980137-578b8b38-f647-4c02-886f-133bbbcbea4e.jpeg" width="100%" ><br>
+<img src="https://web.whatsapp.com/eb88d39e-4319-42a9-80a2-1eff20b7cedf" width="100%" ><br>
 <h1 align="center" >Fashion Holic</h1>
 
 
