@@ -24,7 +24,7 @@
 <!-- womon page -->
 <h1 align="center">WOMEN PAGE</h1>
 
-<img src="(https://user-images.githubusercontent.com/115607523/214030276-c9dab001-1114-4d09-9111-9d6d47bad647.png)" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214030276-c9dab001-1114-4d09-9111-9d6d47bad647.png" width="100%"><br>
 
 <!-- cart2 -->
 <h1 align="center">CART IS EMPTY</h1>
