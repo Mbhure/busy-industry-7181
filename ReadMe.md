@@ -57,12 +57,12 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://linkedin.com/in/priti tiwari" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="priti tiwari" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/manish-bhure-88362a256/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="Manish" height="30" width="40" /></a>
 </p>
-<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=prititi" alt="prititi" /></a> </p>
+<p align="left"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=prititi" alt="manish" /></a> </p>
 
 <h1 align="left">Languages and Tools:</h1>
 <h4 align="left">HTML, CSS, JavaScript, Bootstrap</h4>
 
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=prititi&" alt="prititi" /></p>
+<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=prititi&" alt="manish" /></p>
