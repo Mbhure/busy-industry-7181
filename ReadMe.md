@@ -29,8 +29,7 @@
 <!-- cart2 -->
 <h1 align="center">CART IS EMPTY</h1>
 
-<img src="https://user-images.githubusercontent.com/115607523/214030052-a59f3082-0b56-4a9b-b62e-e841bb7246be.png
-" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214030511-e7426d0e-ec8c-4f21-a266-ce7ad250c6db.png" width="100%"><br>
 
 
 
