@@ -19,24 +19,27 @@
 <!-- men page -->
 <h1 align="center">MEN PAGE</h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/214014740-b1b565d9-0426-49df-9bff-402f2ca50885.jpeg" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214028766-d32f86c2-f667-473f-9d04-2e67538c7166.png" width="100%"><br>
 
 <!-- womon page -->
 <h1 align="center">WOMEN PAGE</h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/214015020-bc013696-f198-4f41-8247-fb08fef543e4.jpeg" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214028875-bf26e009-ec46-43a8-a339-4d3f88857b47.png
+" width="100%"><br>
 
 <!-- cart2 -->
 <h1 align="center">CART IS EMPTY</h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/214015278-09b1b39f-bd54-4075-949d-f0ca758b9896.jpeg" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214029528-f346d19a-83b6-4283-915f-6c5b041476ce.png
+" width="100%"><br>
 
 
 
 <!-- cart page -->
 <h1 align="center" > CART PAGE </h1>
 
-<img src="https://user-images.githubusercontent.com/115465871/213983050-aa3a6f27-8474-43f7-9c2f-a0610941b0f0.jpeg" width="100%" ><br>
+<img src="https://user-images.githubusercontent.com/115607523/214029645-1adc6137-f1df-4722-a5f5-4a6125a27270.png
+" width="100%" ><br>
 
 <!-- check out -->
 <h1 align="center">CHECKOUT PAGE</h1>
