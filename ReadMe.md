@@ -3,7 +3,7 @@
 <h1 align="center" >Fashion Holic</h1>
 
 
-<img alt="Coder GIF" height=250 width=350 src="https://raw.githubusercontent.com/TheDudeThatCode/TheDudeThatCode/master/Assets/Developer.gif" /> <br>
+<img alt="Coder GIF" height=250 width=350 src="https://user-images.githubusercontent.com/115607523/214025342-4fa650f9-dcc8-4c1a-806d-c84ff49abade.gif" /> <br>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=prititi&label=Profile%20views&color=0e75b6&style=flat" alt="prititi" /> </p>
 
