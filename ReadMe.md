@@ -29,7 +29,7 @@
 <!-- cart2 -->
 <h1 align="center">CART IS EMPTY</h1>
 
-<img src="https://user-images.githubusercontent.com/115607523/214030511-e7426d0e-ec8c-4f21-a266-ce7ad250c6db.png" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214032303-2f8d2f04-b3d6-4873-98e3-d57b4fce1ad1.png" width="100%"><br>
 
 
 
@@ -51,7 +51,7 @@
 <!-- admin page -->
 <h1 align="center">ADMIN PAGE</h1>
 
-<img src="Admin](https://user-images.githubusercontent.com/115607523/214032077-55503c91-6598-49d9-8831-4e8e414b8edd.png" width="100%"><br>
+<img src="https://user-images.githubusercontent.com/115607523/214032077-55503c91-6598-49d9-8831-4e8e414b8edd.png" width="100%"><br>
 
 
 
