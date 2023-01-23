@@ -9,7 +9,7 @@
 
 <h1 align="center" >TEAM DESCRIPTION</h1>
 <ul>
-   <li> <h4 >Manish Bhure - [ Home Page,Landing Page,Man page ,Women page]</h4></li>
+   <li> <h4 >Manish Bhure (Team Leader) - [ Home Page,Man page ,Women page]</h4></li>
     <li> <h4 >Akshay Patil - [ Login/Registration ]</h4></li>
     <li> <h4 > sanjeet kumar - [ Product page ,Cart page, Cart is empty page ]</h4></li>
       <li> <h4 >Manish Mehra - [ Admin page ]</h4></li>
