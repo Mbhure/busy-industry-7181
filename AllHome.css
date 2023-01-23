@@ -499,3 +499,21 @@ img {vertical-align: middle;}
       #inpu:hover{
         width: 250px;
       }
+/* Medium Screen */
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .mainDiv{
+grid-template-columns: repeat(2,1fr);
+width: 250px;
+}
+
+}
+
+/* Small Screen */
+@media only screen and (min-width: 0px) and (max-width: 499px) {
+  .mainDiv{
+grid-template-columns: repeat(1,1fr);
+width: 250px;
+}
+
+
+}
