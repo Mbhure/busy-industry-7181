@@ -36,8 +36,7 @@
 <!-- cart page -->
 <h1 align="center" > CART PAGE </h1>
 
-<img src="https://user-images.githubusercontent.com/115607523/214029645-1adc6137-f1df-4722-a5f5-4a6125a27270.png
-" width="100%" ><br>
+<img src="https://user-images.githubusercontent.com/115607523/214030714-b3ded302-bbb1-4db6-977d-ac4d55a7a8b7.png" width="100%" ><br>
 
 <!-- check out -->
 <h1 align="center">CHECKOUT PAGE</h1>
