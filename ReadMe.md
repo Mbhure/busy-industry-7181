@@ -9,12 +9,11 @@
 
 <h1 align="center" >TEAM DESCRIPTION</h1>
 <ul>
-   <li> <h4 >Priti Tiwari - [ Landing page, Checkout page, Payment page ]</h4></li>
-    <li> <h4 >Dhanush - [ Login/Registration, Man page ,Women page ]</h4></li>
-    <li> <h4 >Deepak - [ Product page ,Cart page ]</h4></li>
-     <li> <h4 >Shivbhushan - [ Cart is empty page ]</h4></li>
-      <li> <h4 >Ashish - [ Admin page ]</h4></li>
-      <li><h4 align="left" > Netlify-link-  https://admirable-pavlova-852094.netlify.app/ </h4></li>
+   <li> <h4 >Manish Bhure - [ Home Page,Landing Page,Man page ,Women page]</h4></li>
+    <li> <h4 >Akshay Patil - [ Login/Registration ]</h4></li>
+    <li> <h4 > sanjeet kumar - [ Product page ,Cart page, Cart is empty page ]</h4></li>
+      <li> <h4 >Manish Mehra - [ Admin page ]</h4></li>
+      <li><h4 align="left" > Netlify-link-  https://precious-shortbread-8c078b.netlify.app/ </h4></li>
      
 </ul>
 <!-- men page -->
